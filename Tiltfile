@@ -20,3 +20,5 @@ k8s_custom_deploy(
 
 k8s_resource('pats-tanzu-java-web-app', port_forwards=["8080:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': 'pats-tanzu-java-web-app'}])
+
+allow_k8s_contexts('tap-cluster')
